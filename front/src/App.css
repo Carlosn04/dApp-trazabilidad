@@ -1,0 +1,192 @@
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the entire viewport */
+  height: 100%; /* To ensure the body takes the full viewport height */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* New app container */
+.app-container {
+  background-color: #fff; /* White background for the entire viewport */
+  width: 100vw; /* Take up the entire viewport width */
+  height: 100vh; /* Take up the entire viewport height */
+  display: flex;
+  justify-content: center; /* Center the mobile window horizontally */
+  align-items: center; /* Center the mobile window vertically */
+}
+
+/* Mobile app 'window' */
+.mobile-window {
+  background-color: #fff; /* White background for our mobile app 'window' */
+  width: 375px; /* Approx width of iPhone X */
+  max-width: 90%; /* Make sure it doesn't overflow on really small devices */
+  height: 812px; /* Approx height of iPhone X */
+  max-height: 90vh; /* Do not exceed 90% of the viewport height */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A little shadow for a 'lifted' effect */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  overflow: hidden; /* In case any child wants to go out of bounds */
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Navbar styles */
+nav {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text color */
+  padding: 12px 0; /* Some vertical padding for aesthetics */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Align list items in a row */
+  justify-content: space-around; /* Distribute links evenly */
+}
+
+nav li {
+  margin: 0; /* Remove default margins */
+}
+
+nav a {
+  color: #fff; /* White text color for links */
+  text-decoration: none; /* Remove underlines */
+  padding: 4px 12px; /* Some padding for a better touch target */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+nav a:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Main content area */
+/* Assuming the <Routes> component or its children might produce a wrapping div */
+div.mobile-window > div:last-child {
+  flex: 1; /* Take up remaining space after the navbar */
+  overflow-y: auto; /* Add scrolling if content exceeds space */
+  padding: 16px; /* Some inner padding */
+}
+
+/* ... Your other styles ... */
+
+.organization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjust to position the form higher */
+  padding-top: 10%; /* Some padding from the top to move it a bit higher */
+}
+
+.organization-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%; /* Use 80% of parent width */
+  max-width: 300px; /* Maximum width of the form */
+}
+
+.organization .input-group {
+  margin-bottom: 20px;
+}
+
+.organization .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.organization .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.organization .input-group input:focus {
+  border-color: #007bff;
+}
+
+.organization .input-group select {
+    font-size: 1.1em; /* Adjust this value according to your preference */
+}
+
+.organization .submit-btn {
+  background-color: #1f6f47;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.organization .submit-btn:hover {
+  background-color: #1f6f47;
+}
+
+/* ... Previous styles ... */
+
+.response {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.response h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table + table {
+  margin-top: 20px;  /* Adjust this value as needed */
+}
+
+
+table, th, td {
+  border: 1px solid #dcdcdc;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 12px;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tbody tr:hover {
+  background-color: #e6e6e6;
+}
+
+.response table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%; /* optional, adjust based on your requirements */
+  background-color: white;
+  border-radius: 10px; /* round corners */
+  overflow: hidden; /* to ensure border radius is applied to child elements */
+  border: 2px solid black; /* thicker border */
+}

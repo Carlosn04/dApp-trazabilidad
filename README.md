@@ -1,11 +1,11 @@
 # Trazabilidad en EVM
 
-El proyecto contiene dos partes, siendo las carpetas de "back" y "front". 
+Este proyecto consta de dos partes principales, ubicadas en las carpetas "back" y "front".
 
-- El back utiliza la herramienta de hardhat para el nodo local de Ethereum y el deploy de contratos
-- El front es un entorno de vite react y que utiliza ethers.js
+- "Back" se sirve de la herramienta Hardhat para llevar a cabo el despliegue de contratos inteligentes.
+- "Front", es un entorno impulsado por Vite React que se apoya en ethers.js.
 
-Este proyecto está pensado para ser ejecutado en una red local de ganache o hardhat. A continuación se indican los pasos de forma individual para cada una.
+Este proyecto está diseñado para operar en una red local, ya sea con Ganache o Hardhat. A continuación, se presenta una guía para ejecutar el proyecto en cada uno de estos entornos.
 
 # GANACHE - Iniciar el proyecto
 
@@ -15,41 +15,38 @@ Abre la consola desde el directorio principal y ejecuta el siguiente comando:
 cd back && npm run init-ganache && cd ../front && yarn install && yarn run dev
 ```
 
-Se creará un archivo llamado smart-contract.json tanto en el back como en el front, con la información necesaria para interactuar posteriormente con el contrato inteligente.
+Esto generará un archivo llamado smart-contract.json en tanto "back" como en "front", que contendrá la información necesaria para interactuar con el contrato inteligente.
 
+# Configuración de Metamask para ganache. 
 
-Una vez copiadas las addresses y privateKeys abriremos otra consola y ejecutaremos el siguiente comando:
-
-```bash
-cd back && npm run start && cd ../front && yarn install && yarn run dev
-```
-
-# Configuración de Metamask en ganache. 
-
-Es importante borrar los datos de la pestaña de actividad para evitar conflictos con el nonce. Si tuvieses una red de ganache añadida anteriormente, bórrala y añádela de nuevo con los datos siguientes:
+Asegúrate de borrar los datos en la pestaña de actividad en Metamask. Esto previene conflictos relacionados con el nonce. Si ya tenías una red de Ganache configurada previamente en Metamask, es recomendable eliminarla y agregarla de nuevo con la siguiente información:
 - URL: http://localhost:7545
 - ID: 1337
 
-Importa una o varias de las carteras para pagar el gas de las transacciones de registro de organizaciones y de agregar eventos a las etiquetas.
+Importa una o varias de las carteras para cubrir el coste del gas asociado a las transacciones.
 
 # HARDHAT - Iniciar el proyecto
 
-Una vez hayas clonado el proyecto, abre la consola desde el editor de código y ejecuta el siguiente comando:
+Abre la consola desde el directorio principal y ejecuta el siguiente comando:
 
 ```bash
 cd back && npm run init-hardhat
 ```
 
-Una vez que se haya iniziado el nodo de hardhat correctamente copiaremos las carteras en el archivo addresses.md, posteriormente abriremos otra consola y ejecutaremos el siguiente comando:
+Una vez que se haya iniziado el nodo de hardhat correctamente puedes copiar las carteras en el archivo addresses.md
+
+Abre una nueva consola, ya que en la actual está ejecutándose el nodo de hardhat, y ejecutaremos el siguiente comando:
 
 ```bash
 cd back && npm run start && cd ../front && yarn install && yarn run dev
 ```
 
-## Configuración de Metamask en hardhat. 
+Esto generará un archivo llamado smart-contract.json en tanto "back" como en "front", que contendrá la información necesaria para interactuar con el contrato inteligente.
 
-Es importante borrar los datos de la pestaña de actividad para evitar conflictos con el nonce. Si tuvieses una red de hardhat añadida anteriormente, bórrala y añádela de nuevo con los datos siguientes:
+## Configuración de Metamask para hardhat. 
+
+Asegúrate de borrar los datos de la pestaña de actividad para evitar conflictos con el nonce. Si tuvieses una red de hardhat añadida anteriormente, bórrala y añádela de nuevo con los datos siguientes:
 - URL: http://localhost:8545
 - ID: 31337
 
-Importa una o varias de las carteras que tengas en el archivo de addresses.md para pagar el gas de las transacciones de registro de organizaciones y de agregar eventos a las etiquetas.
+Importa una o varias de las carteras para cubrir el coste del gas asociado a las transacciones.

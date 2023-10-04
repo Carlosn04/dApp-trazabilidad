@@ -4,7 +4,7 @@ import { ethers } from "ethers"
 
 export default function Organizacion() {
   const [nombre, setNombre] = useState("");
-  const [estado, setEstado] = useState("");
+  const [estado, setEstado] = useState("0");
   const [response, setResponse] = useState("")
 
   const handleSubmit = async (event) => {

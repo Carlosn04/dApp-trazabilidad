@@ -1,7 +1,9 @@
 import { ethers, JsonRpcProvider } from "ethers";
 import SmartContract from '../smart-contracts.json';
 
-let provider = new JsonRpcProvider("http://127.0.0.1:8545");
+import networkConfig from '../json-rpc-url.json';
+
+let provider = new ethers.JsonRpcProvider(networkConfig.url);
 
 
 // const pKey =

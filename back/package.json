@@ -1,15 +1,21 @@
 {
   "scripts": {
+    "set-hardhat": "npx hardhat set-network",
+    "set-ganache": "npx hardhat set-network --netname ganache",
     "compile": "npx hardhat compile",
     "format": "node format-contracts.js",
     "node": "npx hardhat node",
     "deploy": "npx hardhat run scripts/deploy.js --network localhost",
-    "copy": "cp smart-contracts.json ../front/smart-contracts.json",
-    "init": "npm install && npm run node",
-    "start": "npm run compile && npm run format && npm run deploy && npm run copy"
+    "deploy-ganache": "npx hardhat run scripts/deploy.js --network ganache",
+    "copy": "shx cp smart-contracts.json ../front/smart-contracts.json",
+    "start-hardhat": "npm run set-hardhat && npm run compile && npm run format && npm run deploy && npm run copy",
+    "start-ganache": "npm run set-ganache && npm run compile && npm run format && npm run deploy-ganache && npm run copy",
+    "init-hardhat": "npm install && npm run node",
+    "init-ganache": "npm install && npm run start-ganache"
   },
   "devDependencies": {
-    "hardhat": "^2.17.4"
+    "hardhat": "^2.17.4",
+    "shx": "^0.3.4"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",

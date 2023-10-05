@@ -4,10 +4,10 @@
 
 Este proyecto consta de dos partes principales, ubicadas en las carpetas "back" y "front".
 
-- "Back" se sirve de la herramienta Hardhat para llevar a cabo el despliegue de contratos inteligentes.
+- "Back" se utiliza la herramienta Hardhat para llevar a cabo el despliegue de contratos inteligentes.
 - "Front" es un entorno impulsado por Vite React que se apoya en ethers.js.
 
-Este proyecto está diseñado para operar en una red local, ya sea con Ganache o Hardhat. A continuación, se presenta una guía para ejecutar el proyecto en cada uno de estos entornos.
+Este proyecto está diseñado para operar en una red local, ya sea con Ganache o Hardhat. A continuación, se presenta una guía para ejecutar el proyecto en cada uno de estos entornos. En la carpeta "Back" puedes encontrar [más información de los scripts.](https://github.com/Carlosn04/dApp-trazabilidad/blob/master/back/About.md#informaci%C3%B3n-adicional-de-los-scripts)
 
 # GANACHE - Iniciar el proyecto
 

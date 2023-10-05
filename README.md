@@ -1,5 +1,7 @@
 # Trazabilidad en EVM
 
+![imagen](https://ibb.co/kgGtS9s)
+
 Este proyecto consta de dos partes principales, ubicadas en las carpetas "back" y "front".
 
 - "Back" se sirve de la herramienta Hardhat para llevar a cabo el despliegue de contratos inteligentes.

@@ -11,7 +11,7 @@ Este proyecto está diseñado para operar en una red local, ya sea con Ganache o
 
 # GANACHE - Iniciar el proyecto
 
-Abre la consola desde el directorio principal y ejecuta el siguiente comando:
+Asegúrate de que tienes activa la red de ganache local, después abre la consola desde el directorio principal de este proyecto y ejecuta el siguiente comando:
 
 ```bash
 cd back && npm run init-ganache && cd ../front && yarn install && yarn run dev

@@ -40,7 +40,7 @@ Una vez que se haya iniziado el nodo de hardhat correctamente puedes copiar las 
 Abre una nueva consola, ya que en la actual está ejecutándose el nodo de hardhat, y ejecutaremos el siguiente comando:
 
 ```bash
-cd back && npm run start && cd ../front && yarn install && yarn run dev
+cd back && npm run start-hardhat && cd ../front && yarn install && yarn run dev
 ```
 
 Esto generará un archivo llamado smart-contract.json en tanto "back" como en "front", que contendrá la información necesaria para interactuar con el contrato inteligente.

@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import './App.css'
-import { createRoot } from "react-dom/client";
 import Navbar from './components/NavBar/NavBar';
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"

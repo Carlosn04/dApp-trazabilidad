@@ -13,17 +13,15 @@ async function formatSmartContracts() {
     for (const dir of dirs) {
       const dirPath = path.join(artifactsPath, dir);
       if ((await fs.promises.stat(dirPath)).isDirectory()) {
-        // Get all files in the directory
         const filesInDir = await fs.promises.readdir(dirPath);
 
-        // Filter for only .json files (assuming you have only one .json per contract directory)
         const jsonFiles = filesInDir.filter(file => path.extname(file) === '.json' && !file.includes('.dbg'));
 
         if (jsonFiles.length > 0) {
           const jsonFilePath = path.join(dirPath, jsonFiles[0]);
           const contractData = JSON.parse(await fs.promises.readFile(jsonFilePath, 'utf8'));
           contractsData.push({
-              name: jsonFiles[0].split('.')[0],  // Assuming the naming format is number_ContractName.sol
+              name: jsonFiles[0].split('.')[0],
               address: "",
               abi: contractData.abi
           });

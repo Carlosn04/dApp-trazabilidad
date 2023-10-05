@@ -1,6 +1,6 @@
 # Trazabilidad en EVM
 
-![imagen](https://ibb.co/kgGtS9s)
+![imagen](https://i.ibb.co/gMrxRPL/Preview.png)
 
 Este proyecto consta de dos partes principales, ubicadas en las carpetas "back" y "front".
 

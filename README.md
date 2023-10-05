@@ -49,6 +49,6 @@ Esto generará un archivo llamado smart-contract.json en tanto "back" como en "f
 
 Asegúrate de borrar los datos de la pestaña de actividad para evitar conflictos con el nonce. Si tuvieses una red de hardhat añadida anteriormente, bórrala y añádela de nuevo con los datos siguientes:
 - URL: http://localhost:8545
-- ID: 31337
+- ID: 1337
 
 Importa una o varias de las carteras para cubrir el coste del gas asociado a las transacciones.

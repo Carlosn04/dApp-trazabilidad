@@ -35,6 +35,9 @@ module.exports = {
     localhost: {
       initialBaseFeePerGas: 0,
       url: "http://127.0.0.1:8545"
+    },
+    hardhat: {
+      chainId: 1337
     }
   }
 };

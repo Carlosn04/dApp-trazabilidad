@@ -5,6 +5,8 @@ import { ethers } from "ethers"
 export default function Etiqueta() {
     const [etiqueta, setEtiqueta] = useState("");
     const [uploadedFile, setUploadedFile] = useState();
+    const [response, setResponse] = useState("")
+    const [responseTwo, setResponseTwo] = useState("")
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -13,6 +15,7 @@ export default function Etiqueta() {
         const signer = await provider.getSigner();
         await agregarEvento(signer, etiqueta);
         // Handle success, maybe show a success message or redirect the user
+        setResponse(`La etiqueta ha sido añadida!`)
       } catch (error) {
         // Handle error, show an error message to the user
         console.error("Error:", error);
@@ -38,6 +41,7 @@ export default function Etiqueta() {
           const provider = new ethers.BrowserProvider(window.ethereum);
           const signer = await provider.getSigner();
           await agregarEventosBatch(signer, etiquetas);
+          setResponseTwo("Las etiquetas han sido añadidas!")
         } catch (error) {
           console.error("Error parsing or submitting:", error);
         }
@@ -59,6 +63,9 @@ export default function Etiqueta() {
           </div>
           <button type="submit" className="submit-btn">Añadir</button>
         </form>
+        {response && <div className="response">
+          {response}
+        </div>}
   
         <h2>Múltiples etiquetas</h2>
         <form onSubmit={handleFileSubmit} className="organization-form">
@@ -68,6 +75,9 @@ export default function Etiqueta() {
           </div>
           <button type="submit" className="submit-btn">Añadir</button>
         </form>
+        {responseTwo && <div className="response">
+          {responseTwo}
+        </div>}
       </div>
     );
 }

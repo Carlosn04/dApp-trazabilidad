@@ -19,7 +19,7 @@ cd back && npm run init-ganache && cd ../front && yarn install && yarn run dev
 
 Esto generará un archivo llamado smart-contract.json en tanto "back" como en "front", que contendrá la información necesaria para interactuar con el contrato inteligente.
 
-# Configuración de Metamask para ganache. 
+## Configuración de Metamask para ganache. 
 
 Asegúrate de borrar los datos en la pestaña de actividad en Metamask. Esto previene conflictos relacionados con el nonce. Si ya tenías una red de Ganache configurada previamente en Metamask, es recomendable eliminarla y agregarla de nuevo con la siguiente información:
 - URL: http://localhost:7545
